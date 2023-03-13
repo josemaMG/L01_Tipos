@@ -2,7 +2,7 @@ package fp.tipos.universidad;
 
 import java.util.Objects;
 
-public class Beca {
+public class Beca implements Comparable<Beca>{
 	String codigo;
 	Double cuantiaTotal;
 	Integer duracion;
@@ -53,5 +53,8 @@ public class Beca {
 	}
 	public String toString() {
 		return "Beca( Código: "+codigo+", Cuantia total: "+cuantiaTotal+", Duración: "+duracion+", Tipo: "+tipo+", Cuantia mensual: "+ cuantiaMensual()+")";
+	}
+	public int compareTo(Beca o) {
+		return codigo.compareTo(o.codigo);
 	}
 }

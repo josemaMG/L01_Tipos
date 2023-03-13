@@ -1,7 +1,6 @@
 package fp.tipos.musica;
 
 import java.time.*;
-import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
 public class Cancion implements Comparable<Cancion> {
@@ -12,7 +11,7 @@ public class Cancion implements Comparable<Cancion> {
 	public Cancion(String titulo, String artista) {
 		this.titulo=titulo;
 		this.artista=artista;
-		this.duracion=Duration.of(0, ChronoUnit.SECONDS);
+		this.duracion=Duration.ZERO;
 	}
 	public String getTitulo() {
 		return titulo;

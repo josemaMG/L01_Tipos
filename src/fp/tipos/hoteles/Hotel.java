@@ -1,7 +1,7 @@
 package fp.tipos.hoteles;
 
 import java.util.Objects;
-
+//Se puede convertir en un record.
 public class Hotel{
 	String nombre,direccion,ciudad,telefono,cadenaHotelera,descripcion;
 	CategoriaHotelera categoria;
