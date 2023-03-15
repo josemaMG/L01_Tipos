@@ -37,6 +37,9 @@ public class Persona implements Comparable<Persona> {
 	public String getApellidos() {
 		return apellidos;
 	}
+	public String getEmail() {
+		return email;
+	}
 	public String getDni() {
 		return dni;
 	}
