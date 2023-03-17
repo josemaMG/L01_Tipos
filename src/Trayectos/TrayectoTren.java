@@ -110,28 +110,20 @@ public class TrayectoTren {
 		
 		List<String> result=new ArrayList<>();			//
 		for (String e: estaciones) {
-			if (estaciones.indexOf(e)!=posicion) {
-			result.add(e);
-			}	else {
+			if (estaciones.indexOf(e)==posicion) {
 				result.add(estacion);
 			}
+			result.add(e);
 		}
 		
 		this.estaciones=result;
 		
 		List<LocalTime> result2=new ArrayList<>();
-		if (posicion==1) {
-			result2.add(horaLlegada);
 			for (LocalTime e:horasLlegada) {
-				result2.add(e);
-			}
-		} else {
-			for (LocalTime e:horasLlegada) {
-				if (horasSalidas.indexOf(e)!=posicion-1) {
-				result2.add(e);
-			} else {
+				if (horasSalidas.indexOf(e)==posicion-1) {
 				result2.add(horaLlegada);
 			}
+				result2.add(e);
 		}
 
 		List<LocalTime> result3=new ArrayList<>();			//
@@ -152,8 +144,5 @@ public class TrayectoTren {
 		3º PUERTOLLANO                                                   08.40 08.41  -> [2,3]
 		4º CIUDAD REAL                                                   08.57 08.58  -> [3,4]
 		5º MADRID-PUERTA DE ATOCHA                                       10.02        -> [4,4]  No puede ser           */
-		}
-	
-	
 	}
 }
